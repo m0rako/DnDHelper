@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #20222c;
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  min-height: 100vh; /* Занимаем всю доступную высоту */
+}
+
+h1, h2 {
+  color: #fff;
+}
+
+.form-container {
+  background-color: #283351;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 400px;
+}
+
+input, button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  color: #20222c;
+  font-size: 14px;
+}
+  
+button {
+  background-color: #20222c;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #010022;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+/* Адаптивность под телефоны */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%; /* Занимает 90% ширины экрана */
+    padding: 15px; /* Уменьшение отступов */
+  }
+}

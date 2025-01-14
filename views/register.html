@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/loginProfile.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Регистрация</h1>
+        <form class="register-form">
+            <input type="text" class="register-login" placeholder="Логин" required>
+            <input type="password" class="register-password" placeholder="Пароль" required>
+            <button type="submit" class="register-submit">Зарегистрироваться</button>
+        </form>
+        <dialog class="register-modal"></dialog>
+        <button onclick="redirectToLogin()">Назад к авторизации</button>
+    </div>
+    <script src="scripts/register.js"></script>
+    <script>
+        function redirectToLogin() {
+            window.location.href = '/login';
+        }
+    </script>
+</body>
+</html>

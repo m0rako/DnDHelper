@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">DnD</div>
+    
+    <nav class="nav">
+        <a href="#" class="nav-item">Лобби</a>
+    </nav>
+    <div class="profile-menu">
+        <span class="profile-name">Профиль</span>
+        <div class="dropdown-menu">
+            <button class="dropdown-item edit-profile">Редактировать профиль</button>
+            <button class="dropdown-item logout">Выйти</button>
+        </div>
+    </div>
+</header>
+<main class="main-container">
+    <header class="welcome-header">
+      <h1>Добро пожаловать, <span class="current-user"></span>!</h1>
+    </header>
+    <div class="content">
+      <aside class="sidebar">
+        <h2>Пользователи онлайн:</h2>
+        <ul class="user-list"></ul>
+      </aside>
+      <section class="lobby">
+        <h2>Список лобби:</h2>
+        <ul class="lobby-list">
+          <li>Лобби 1</li>
+          <li>Лобби 2</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+<dialog class="modal">
+    <form class="edit-profile-form">
+        <h3>Редактирование профиля</h3>
+        <p class="user-login-display">Логин: <span class="user-login"></span></p>
+        <label>
+            Имя:
+            <input type="text" class="profile-name-input" required>
+        </label>
+        <label>
+            Новый пароль: !! ЕЩЕ НЕ ГОТОВО
+            <input type="password" class="profile-password-input">
+        </label>
+        <div class="modal-buttons">
+            <button type="submit" class="save-button">Сохранить</button>
+            <button type="button" class="close-button">Отмена</button>
+        </div>
+    </form>
+</dialog>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
